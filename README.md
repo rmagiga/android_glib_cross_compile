@@ -29,7 +29,17 @@ sudoの実行権限が必要です。
 
 ```
 sudo apt update && sudo apt upgrade -y
-sudo apt install make cmake autoconf automake libtool pkg-config meson ninja-build unzip -y
+sudo apt install make cmake autoconf automake libtool pkg-config unzip python3-pip -y
+```
+
+mesonとninjaのインストール
+```
+python3 -m pip install meson ninja
+```
+
+```
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## ビルド
