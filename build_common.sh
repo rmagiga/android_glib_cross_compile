@@ -5,6 +5,13 @@
 download() {
     local url="$1"
     local output="$2"
+    
+    # 既にファイルが存在する場合はスキップ
+    if [ -f "$output" ]; then
+        echo "File already exists, skipping download: $output"
+        return 0
+    fi
+    
     mkdir -p "$(dirname "$output")"
     curl -L -o "$output" "$url"
 }

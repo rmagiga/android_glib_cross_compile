@@ -5,7 +5,7 @@ export SRCDIR=$HOME/src
 export OUTDIR=$HOME/local
 
 # version
-export NDK_VERSION=r25c
+export NDK_VERSION=r27d
 export ANDROID_API=21
 
 export GLIB_VERSION=2.84.2
