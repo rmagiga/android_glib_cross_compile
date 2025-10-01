@@ -14,6 +14,7 @@ cd $SRCDIR/libiconv-$LIBICONV_VERSION
 ./configure --host=$TARGET \
 	--prefix=$PREFIX \
 	--enable-static
+	--enable-shared
 
 make -j$(nproc)
 make install

@@ -12,7 +12,7 @@ ranlib = '{{TOOLCHAIN}}/bin/llvm-ranlib'
 strip = '{{TOOLCHAIN}}/bin/llvm-strip'
 ld = '{{TOOLCHAIN}}/bin/ld'
 objcopy = '{{TOOLCHAIN}}/bin/llvm-objcopy'
-pkgconfig = '/usr/bin/pkg-config'
+pkg-config = '/usr/bin/pkg-config'
 
 [properties]
 sys_root = '{{TOOLCHAIN}}/sysroot'
@@ -32,4 +32,4 @@ c_link_args = ['-fPIE','-L{{LIBDIR}}']
 
 pkg_config_path = '{{LIBDIR}}/pkgconfig'
 
-default_library = 'static'
+default_library = 'both'

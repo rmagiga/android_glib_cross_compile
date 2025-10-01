@@ -14,6 +14,7 @@ cd $SRCDIR/gettext-$GETTEXT_VERSION
 ./configure --host=$TARGET \
 	--prefix=$PREFIX \
 	--enable-static
+	--enable-shared
 
 make -j$(nproc)
 make install
