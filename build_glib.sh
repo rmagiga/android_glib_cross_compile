@@ -17,10 +17,11 @@ sed \
   -e "s|{{PREFIX}}|$PREFIX|g" \
   -e "s|{{LIBDIR}}|$LIBDIR|g" \
   -e "s|{{INCLUDEDIR}}|$INCLUDEDIR|g" \
+  -e "s|{{ANDROID_API}}|$ANDROID_API|g" \
   cross_file.txt.template > $SRCDIR/glib-$GLIB_VERSION/cross_file.txt
 
 cd $SRCDIR/glib-$GLIB_VERSION
-meson build --cross-file cross_file.txt
+meson setup build --cross-file cross_file.txt
 cd build
 ninja
 ninja install
