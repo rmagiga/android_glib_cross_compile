@@ -66,3 +66,5 @@ env.shに設定されている代表的な変数名
 | GLIB_VERSION | Glibのバージョン |
 | LIBICONV_VERSION | iconvのバージョン |
 | GETTEXT_VERSION | gettextのバージョン |
+| PCRE2_VERSION | pcre2のバージョン |
+| LIBFFI_VERSION | libffiのバージョン |
