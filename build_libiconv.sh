@@ -13,7 +13,7 @@ extract $DOWNLOAD_FILE $SRCDIR/libiconv-$LIBICONV_VERSION
 cd $SRCDIR/libiconv-$LIBICONV_VERSION
 ./configure --host=$TARGET \
 	--prefix=$PREFIX \
-	--enable-static
+	--enable-static \
 	--enable-shared
 
 make -j$(nproc)

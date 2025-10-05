@@ -13,7 +13,7 @@ extract $DOWNLOAD_FILE $SRCDIR/gettext-$GETTEXT_VERSION
 cd $SRCDIR/gettext-$GETTEXT_VERSION
 ./configure --host=$TARGET \
 	--prefix=$PREFIX \
-	--enable-static
+	--enable-static \
 	--enable-shared
 
 make -j$(nproc)
