@@ -7,5 +7,4 @@ $SCRIPTDIR/setup_ndk.sh
 $SCRIPTDIR/build_libiconv.sh
 $SCRIPTDIR/build_gettext.sh
 $SCRIPTDIR/build_pcre2.sh
-$SCRIPTDIR/build_libffi.sh
 $SCRIPTDIR/build_glib.sh
