@@ -10,7 +10,6 @@ build_clean.sh              # ビルドで作成したディレクトリ/ファ�
 build_common.sh             # 共通関数
 build_gettext.sh            # gettextをビルドするスクリプト
 build_glib.sh               # glibをビルドするスクリプト
-build_libffi.sh             # libffiをビルドするスクリプト
 build_libiconv.sh           # libiconvをビルドするスクリプト
 build_pcre2.sh              # pcre2をビルスするスクリプト
 cross_file.txt.template     # mesonのクロスコンパイル用ファイルテンプレート
@@ -89,4 +88,3 @@ env.shに設定されている代表的な変数名
 | LIBICONV_VERSION | iconvのバージョン |
 | GETTEXT_VERSION | gettextのバージョン |
 | PCRE2_VERSION | pcre2のバージョン |
-| LIBFFI_VERSION | libffiのバージョン |
