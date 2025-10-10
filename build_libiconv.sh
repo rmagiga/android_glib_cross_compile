@@ -4,13 +4,15 @@ SCRIPTDIR=$(cd $(dirname $0); pwd)
 . $SCRIPTDIR/env.sh
 . $SCRIPTDIR/build_common.sh
 
+URL=https://ftpmirror.gnu.org/libiconv/libiconv-$LIBICONV_VERSION.tar.gz
 DOWNLOAD_FILE=${DOWNLOADDIR}/libiconv-$LIBICONV_VERSION.tar.gz
+EXTRACT_DIR=$SRCDIR/libiconv-$LIBICONV_VERSION
 
 # ダウンロード
-download https://ftpmirror.gnu.org/libiconv/libiconv-$LIBICONV_VERSION.tar.gz $DOWNLOAD_FILE
-extract $DOWNLOAD_FILE $SRCDIR/libiconv-$LIBICONV_VERSION
+download $URL $DOWNLOAD_FILE
+extract $DOWNLOAD_FILE $EXTRACT_DIR
 
-cd $SRCDIR/libiconv-$LIBICONV_VERSION
+cd $EXTRACT_DIR
 ./configure --host=$TARGET \
 	--prefix=$PREFIX \
 	--enable-static \
