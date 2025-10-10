@@ -46,7 +46,7 @@ sudoの実行権限が必要です。rootユーザーの場合は、sudoは不�
 
 ```
 sudo apt update && sudo apt upgrade -y
-sudo apt install make cmake autoconf automake libtool pkg-config unzip python3-pip texinfo -y
+sudo apt install make cmake autoconf automake libtool pkg-config unzip python3-pip -y
 ```
 
 mesonとninjaのインストール
