@@ -13,19 +13,22 @@ download $URL $DOWNLOAD_FILE
 extract $DOWNLOAD_FILE $EXTRACT_DIR
 
 cd $EXTRACT_DIR
+EXTRA_CONF="--disable-rpath \
+						--disable-libasprintf \
+						--disable-java \
+						--disable-native-java \
+						--disable-openmp \
+						--disable-curses \
+						--disable-csharp \
+						--disable-acl \
+						--disable-d \
+						"
+
 ./configure --host=$TARGET \
 	--prefix=$PREFIX \
 	--enable-static \
 	--enable-shared \
-	--disable-java \
-	--disable-d \
-	--disable-modula2 \
-	--disable-c++ \
-	--disable-libasprintf \
-	--disable-curses \
-	--disable-openmp \
-	--disable-acl \
-	--disable-xattr \
+	$EXTRA_CONF \
 	--disable-examples
 
 make -j$(nproc)
