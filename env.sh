@@ -49,3 +49,8 @@ export LIBS="-L$LD_LIBRARY_PATH"
 
 export PKG_CONFIG=/usr/bin/pkg-config
 export PKG_CONFIG_PATH=$LIBDIR/pkgconfig
+
+# python設定
+export VIRTUAL_NAME=build_meson
+export VIRTUAL_ENV=$HOME/$VIRTUAL_NAME
+export PATH=$VIRTUAL_ENV/bin:$PATH

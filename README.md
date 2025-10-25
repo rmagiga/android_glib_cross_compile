@@ -42,22 +42,19 @@ wsl --unregister Ubuntu-22.04
 Ubuntu上で、ビルドに必要なパッケージのインストールをします。
 
 Ubuntuにログイン後に、コマンドを実行してください。(bashを使用しています)
-sudoの実行権限が必要です。rootユーザーの場合は、sudoは不要です。
 
 ```
-sudo apt update && sudo apt upgrade -y
-sudo apt install make cmake autoconf automake libtool pkg-config unzip python3-pip -y
+git clone https://github.com/rmagiga/android_glib_cross_compile.git
+cd android_glib_cross_compile
 ```
 
-mesonとninjaのインストール
-```
-python3 -m pip install meson ninja
-```
+ビルド環境を構築します。
+OSのパッケージのインストール、Pythonの仮想環境の構築、Android NDKのダウンロード・配置を行います。
+スクリプト内部で、sudoを実行しているので、sudoに対する権限が必要です。
 
-mesonとninjaのパスを環境変数に追加
 ```
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
+./install.sh
+./setup_ndk.sh
 ```
 
 ## ビルド
@@ -65,8 +62,6 @@ source ~/.bashrc
 デフォルトでは、ホームディレクトリ配下に、Android, Downloads, src, localディレクトリをを作成します。
 
 ```
-git clone https://github.com/rmagiga/android_glib_cross_compile.git
-cd android_glib_cross_compile
 ./build_all.sh
 ```
 
