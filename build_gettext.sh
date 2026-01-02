@@ -22,12 +22,18 @@ EXTRA_CONF="--disable-rpath \
 						--disable-csharp \
 						--disable-acl \
 						--disable-d \
+						--disable-c++ \
+						--disable-modula2 \
+						--disable-xattr \
+						--disable-dependency-tracking \
+						--disable-libtool-lock \
 						"
 
 ./configure --host=$TARGET \
 	--prefix=$PREFIX \
 	--enable-static \
 	--enable-shared \
+	--enable-nls \
 	$EXTRA_CONF \
 	--disable-examples
 

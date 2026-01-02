@@ -6,7 +6,7 @@ export OUTDIR=$HOME/local
 
 # version
 export NDK_VERSION=r27d
-export ANDROID_API=21
+export ANDROID_API=34
 
 export GLIB_VERSION=2.86.3
 export LIBICONV_VERSION=1.18
