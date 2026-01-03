@@ -21,7 +21,18 @@ sed \
   cross_file.txt.template > $SRCDIR/glib-$GLIB_VERSION/cross_file.txt
 
 cd $SRCDIR/glib-$GLIB_VERSION
-meson setup build --cross-file cross_file.txt
+meson setup build --cross-file cross_file.txt \
+  -Dtests=false \
+  -Dinstalled_tests=false \
+  -Dman-pages=disabled \
+  -Ddocumentation=false \
+  -Dintrospection=disabled \
+  -Dnls=disabled \
+  -Dselinux=disabled \
+  -Dlibmount=disabled \
+  -Ddtrace=disabled \
+  -Dsystemtap=disabled
+
 cd build
 ninja
 ninja install

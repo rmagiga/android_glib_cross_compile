@@ -27,7 +27,6 @@ export PATH="$TOOLCHAIN/bin":$PATH
 export PREFIX=$OUTDIR
 export LIBDIR=$PREFIX/lib
 export INCLUDEDIR=$PREFIX/include
-export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
 export BUILD_SYS=x86_64-linux-gnu
 export SYSROOT=$TOOLCHAIN/sysroot/
 
@@ -47,8 +46,8 @@ export CXXFLAGS="-fPIC -I$INCLUDEDIR -D__ANDROID_API__=$ANDROID_API"
 export LDFLAGS="-fPIC -pie -L$LD_LIBRARY_PATH"
 export LIBS="-L$LD_LIBRARY_PATH -pthread"
 
-export PKG_CONFIG=/usr/bin/pkg-config
-export PKG_CONFIG_PATH=$LIBDIR/pkgconfig
+export PKG_CONFIG_LIBDIR=$LIBDIR/pkgconfig
+export PKG_CONFIG_SYSROOT_DIR=$TOOLCHAIN/sysroot
 
 # python設定
 export VIRTUAL_NAME=build_meson
