@@ -15,8 +15,9 @@ extract $DOWNLOAD_FILE $EXTRACT_DIR
 cd $EXTRACT_DIR
 ./configure --host=$TARGET \
 	--prefix=$PREFIX \
-	--enable-static \
-	--enable-shared
+	--enable-shared \
+	--disable-static \
+  --disable-jit
 
 make -j$(nproc)
-make install
+make install-strip

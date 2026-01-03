@@ -42,10 +42,10 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 export LD_LIBRARY_PATH=$LIBDIR
-export CFLAGS="-fPIC -I$INCLUDEDIR"
-export CXXFLAGS="-fPIC -I$INCLUDEDIR"
+export CFLAGS="-fPIC -I$INCLUDEDIR -D__ANDROID_API__=$ANDROID_API"
+export CXXFLAGS="-fPIC -I$INCLUDEDIR -D__ANDROID_API__=$ANDROID_API"
 export LDFLAGS="-fPIC -pie -L$LD_LIBRARY_PATH"
-export LIBS="-L$LD_LIBRARY_PATH"
+export LIBS="-L$LD_LIBRARY_PATH -pthread"
 
 export PKG_CONFIG=/usr/bin/pkg-config
 export PKG_CONFIG_PATH=$LIBDIR/pkgconfig

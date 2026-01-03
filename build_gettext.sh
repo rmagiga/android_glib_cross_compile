@@ -38,4 +38,4 @@ EXTRA_CONF="--disable-rpath \
 	--disable-examples
 
 make -j$(nproc)
-make install
+make  install-strip
