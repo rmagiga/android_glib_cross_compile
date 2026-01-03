@@ -31,8 +31,8 @@ EXTRA_CONF="--disable-rpath \
 
 ./configure --host=$TARGET \
 	--prefix=$PREFIX \
-	--enable-static \
 	--enable-shared \
+	--disable-static \
 	--enable-nls \
 	$EXTRA_CONF \
 	--disable-examples
